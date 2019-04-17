@@ -2,17 +2,20 @@ package br.edu.utfpr.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import br.edu.utfpr.excecao.NomeClienteMenor5CaracteresException;
 
 @Data
 @Builder
+
 public class ClienteDTO {
-    private int id;
-    private String nome;
-    private int idade;
-    private String telefone;
-    private double limiteCredito;
-    private PaisDTO pais;
+
+    @Getter int id;
+    @Getter String nome;
+    @Getter private int idade;
+    @Getter private String telefone;
+    @Getter private double limiteCredito;
+    @Getter private PaisDTO pais;
 
     public void setNome(String nome) throws NomeClienteMenor5CaracteresException {
         if (nome.length() < 5)
