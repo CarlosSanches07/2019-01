@@ -13,7 +13,7 @@ import lombok.extern.java.Log;
 import utfpr.daopackage.AbstractDAO;
 
 @Log
-public class PaisDAO extends AbstractDAO{
+public class PaisDAO extends AbstractDAO<PaisDAO> {
 
     // Responsável por criar a tabela País no banco
     public PaisDAO() {
