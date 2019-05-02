@@ -93,7 +93,7 @@ public class PaisDAO extends AbstractDAO<PaisDAO> {
     }
     
     public PaisDTO listarPorId (int id) {
-        return this.listarTodos().stream().filter(p -> p.getId() == id).findAny().orElseThrow(RuntimeException::new);
+        return this.listar().stream().filter(p -> p.getId() == id).findAny().orElseThrow(RuntimeException::new);
     }
 
 }
